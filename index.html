@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc mừng 20/11 - Chị La</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Canvas cho hiệu ứng particles 3D -->
+    <canvas id="particleCanvas"></canvas>
+    
+    <!-- Intro Screen -->
+    <div class="intro-screen" id="introScreen">
+        <div class="intro-content">
+            <h1 class="intro-title">
+                <span class="letter">C</span>
+                <span class="letter">h</span>
+                <span class="letter">ú</span>
+                <span class="letter">c</span>
+                <span class="letter"> </span>
+                <span class="letter">m</span>
+                <span class="letter">ừ</span>
+                <span class="letter">n</span>
+                <span class="letter">g</span>
+            </h1>
+            <div class="intro-date">20/11</div>
+            <button class="start-btn" id="startBtn">
+                <span>Bắt đầu</span>
+                <div class="btn-glow"></div>
+            </button>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="flowers-container" id="flowersContainer"></div>
+        
+        <!-- Hiệu ứng ánh sáng nền -->
+        <div class="light-beam"></div>
+        <div class="light-beam" style="animation-delay: 2s;"></div>
+        <div class="light-beam" style="animation-delay: 4s;"></div>
+        
+        <div class="main-content">
+            <div class="book">
+                <div class="book-cover" id="bookCover">
+                    <div class="magic-circle">
+                        <div class="circle-ring"></div>
+                        <div class="circle-ring"></div>
+                        <div class="circle-ring"></div>
+                    </div>
+                    <h1 class="title">
+                        <span class="title-char">2</span>
+                        <span class="title-char">0</span>
+                        <span class="title-char">/</span>
+                        <span class="title-char">1</span>
+                        <span class="title-char">1</span>
+                    </h1>
+                    <p class="subtitle">✨ Nhấn để mở ✨</p>
+                    <div class="flower-decoration">🌸</div>
+                    <div class="sparkles">
+                        <span>✨</span>
+                        <span>💫</span>
+                        <span>⭐</span>
+                        <span>🌟</span>
+                    </div>
+                </div>
+                
+                <div class="book-content" id="bookContent">
+                    <div class="page">
+                        <div class="floating-elements">
+                            <span class="float-icon">📚</span>
+                            <span class="float-icon">✏️</span>
+                            <span class="float-icon">🎓</span>
+                            <span class="float-icon">💝</span>
+                        </div>
+                        
+                        <h2 class="greeting">
+                            <span class="greeting-word">Kính</span>
+                            <span class="greeting-word">gửi</span>
+                            <span class="greeting-word">Chị</span>
+                            <span class="greeting-word">La</span>
+                            <span class="greeting-word">thân</span>
+                            <span class="greeting-word">mến!</span>
+                            <span class="greeting-word">💐</span>
+                        </h2>
+                        
+                        <div class="message">
+                            <div class="poem-container">
+                                <p class="poem">
+                                    <span class="poem-line">Ngày hai mươi tháng mười một về,</span><br>
+                                    <span class="poem-line">Lòng biết ơn sâu như biển cả.</span><br>
+                                    <span class="poem-line">Chị La ơi, người thầy tuyệt vời,</span><br>
+                                    <span class="poem-line">Dạy dỗ chúng em từng ngày qua.</span>
+                                </p>
+                            </div>
+                            
+                            <p class="main-text">
+                                <span class="text-reveal">Chị không chỉ là người truyền đạt kiến thức,</span><br>
+                                <span class="text-reveal">Mà còn là nguồn cảm hứng, là ánh sáng dẫn đường.</span><br>
+                                <span class="text-reveal">Những bài học của chị không chỉ trên sách vở,</span><br>
+                                <span class="text-reveal">Mà còn là những bài học về cuộc sống, về yêu thương.</span>
+                            </p>
+                            
+                            <div class="highlight">
+                                <div class="highlight-item">✨ Cảm ơn chị vì đã luôn kiên nhẫn, tận tâm</div>
+                                <div class="highlight-item">✨ Cảm ơn chị vì những nụ cười ấm áp</div>
+                                <div class="highlight-item">✨ Cảm ơn chị vì đã tin tưởng và động viên</div>
+                                <div class="highlight-item">✨ Cảm ơn chị vì tất cả những gì chị đã làm</div>
+                            </div>
+                            
+                            <p class="wish">
+                                <span class="wish-line">Chúc chị luôn tràn đầy sức khỏe, hạnh phúc,</span><br>
+                                <span class="wish-line">Mãi giữ được nụ cười rạng rỡ và trái tim nhiệt huyết.</span><br>
+                                <span class="wish-line">Chúc chị thành công trên con đường sự nghiệp,</span><br>
+                                <span class="wish-line">Và luôn là người thầy được yêu mến nhất! 🌟</span>
+                            </p>
+                            
+                            <div class="signature">
+                                <span class="signature-text">Với tình cảm và lòng biết ơn sâu sắc ❤️</span><br>
+                                <strong class="signature-date">Ngày 20/11/2025</strong>
+                            </div>
+                        </div>
+                        
+                        <!-- Nút tạo hiệu ứng đặc biệt -->
+                        <button class="magic-btn" id="magicBtn">
+                            🎆 Tạo phép màu 🎆
+                        </button>
+                        
+                        <!-- Nút hiệu ứng 3D -->
+                        <button class="rainbow-btn" id="rainbowBtn">
+                            🌈 Cầu vồng kỳ diệu 🌈
+                        </button>
+                        
+                        <!-- Nút hiệu ứng Matrix -->
+                        <button class="matrix-btn" id="matrixBtn">
+                            💻 Ma trận số 💻
+                        </button>
+                        
+                        <!-- Nút hiệu ứng vũ trụ -->
+                        <button class="galaxy-btn" id="galaxyBtn">
+                            🌌 Vũ trụ rực rỡ 🌌
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="hearts-container" id="heartsContainer"></div>
+        
+        <!-- Canvas cho hiệu ứng đặc biệt -->
+        <canvas id="specialCanvas"></canvas>
+    </div>
+    
+    <audio id="bgMusic" loop>
+        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    </audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
